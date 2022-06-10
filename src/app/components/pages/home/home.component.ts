@@ -97,15 +97,14 @@ getDirections(place:Feature){
     console.log(this.bikersService.userLocation);
      this.script.load(
     // 'jquery',
-    'popper',
-    'bootstrap-5',
-    'main',
-    'color-scheme',
-    'pwa-services',
-    'chart-js',
-    'progressbar',
-    'swiper',
-    'app')
+    'modernizr',
+    'jquery',
+    'jquery-migrate',
+    'bootstrap.bundle',
+    'swiper-bundle',
+    'fancybox',
+    'jquery.nice-select',
+    'main')
     .then(data => {
       console.log('script loaded ', data);
     }).catch(error => console.log(error));

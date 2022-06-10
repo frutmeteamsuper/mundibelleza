@@ -17,7 +17,7 @@ export class BikersService {
   constructor(
     private mapService:MapService,
     private placesApi:PlacesApiClient) {
-    this.getUserLocation();
+    // this.getUserLocation();
    }
   public async  getUserLocation():Promise<[number,number]>{
     return new Promise( (resolve,reject)=>{
