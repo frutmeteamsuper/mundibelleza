@@ -1,8 +1,8 @@
 {
-  "name": "MotoGO",
-  "short_name": "MotoGO",
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "name": "Mundibelleza",
+  "short_name": "Mundibelleza",
+  "theme_color": "#fff",
+  "background_color": "#fff",
   "display": "fullscreen",
   "scope": "./",
   "start_url": "./",
