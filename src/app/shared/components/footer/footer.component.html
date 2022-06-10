@@ -1,0 +1,33 @@
+<footer class="footer">
+    <div class="container">
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a class="nav-link " (click)="setProfile()"  [ngStyle]="{'color': !_butler.profile ? '#999999' : '#fded09'}" >
+                    <span>
+                        <i class="nav-icon bi bi-person-circle" style="font-size:20px;" ></i>
+                  
+                    </span>
+                </a>
+            </li>
+     
+            <li class="nav-item centerbutton" (click)="statusChange()">
+                <button type="button" class="border-circle" style="margin-top: -190px;border-style: none;border-radius: 20% !important;background-color: white;border-color: white;box-shadow: 0px -12px 10px rgb(0 0 0 / 7%);" 
+                    id="centermenubtn">
+                    <img src="assets/assets/img/pin.png" style="max-width:70px;max-height:90px;" [hidden]="!_butler.bikerStatus"> 
+                    <img src="assets/assets/img/pin2.png" style="max-width:70px;max-height:90px;"[hidden]="_butler.bikerStatus" >
+                      
+                </button>
+            </li>
+      
+            <li class="nav-item">
+                <a class="nav-link " (click)="setRides()">
+                    <span>
+                        <fa-icon [icon]="faMotorcycle"  style="font-size:20px;" [ngStyle]="{'color':   _butler.profile ? '#999999' : '#fded09'}"></fa-icon>
+                        <!-- <i class="nav-icon fas fa-motorcycle" style="font-size:20px;"></i> -->
+                        <!-- <span class="nav-text">Wallet</span> -->
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>

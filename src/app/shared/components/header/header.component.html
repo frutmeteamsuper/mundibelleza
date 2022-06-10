@@ -1,0 +1,93 @@
+<header class="header position-fixed">
+    <div class="row">
+        <div class="col-auto" >
+            <a href="javascript:void(0)" target="_self" class="btn btn-light btn-44 menu-btn"  [hidden]="router.url.includes('/login')">
+                <i class="bi bi-list"></i>
+            </a>
+        </div>
+        <div class="col text-center">
+            <div class="logo-small">
+                <img routerLink="home" src="assets/assets/img/logo.png" alt="" />
+                <h5><span class="text-secondary fw-light"></span><br /></h5>
+            </div>
+        </div>
+        <div class="col-auto">
+            <a [routerLink]="['notifications']"  class="btn btn-light btn-44"  [hidden]="router.url.includes('/login')">
+                <i class="bi bi-bell"></i>
+                <span class="count-indicator"></span>
+            </a>
+        </div>
+    </div>
+<!--     <div class="row mb-2">
+        <div class="col-12 col-md-6 ">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <figure class="avatar avatar-60 rounded-15 border">
+                                <img src="assets/assets/img/user2.jpg" alt="" class="w-100">
+                            </figure>
+                        </div>
+                        <div class="col align-self-center">
+                            <p class="mb-0"><small class="text-secondary size-12">LAVA B500</small>
+                            </p>
+                            <h5>$ 265.00 <small class="text-secondary size-12">x 2 Qty</small></h5>
+                        </div>
+                        <div class="col-auto align-self-center ps-0">
+                            <a href="">Aceptar <i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 ">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <figure class="avatar avatar-60 rounded-15 border">
+                                <img src="assets/assets/img/user4.jpg" alt="" class="w-100">
+                            </figure>
+                        </div>
+                        <div class="col align-self-center">
+                            <p class="mb-0">
+                                <small class="text-secondary size-12">Arturo | 
+                                    <a href="" >4.8 
+                                    <i class="bi bi-star-bold"></i>
+                                </a> | 7 min
+                            </small></p>
+                            <h5 style="color: green;">ofrece llevarte por $ 1.50</h5>
+                        </div>
+                        <div class="col-auto align-self-center ps-0">
+                            <a href="">Aceptar <i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 ">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <figure class="avatar avatar-60 rounded-15 border">
+                                <img src="assets/assets/img/user4.jpg" alt="" class="w-100">
+                            </figure>
+                        </div>
+                        <div class="col align-self-center">
+                            <p class="mb-0"><small class="text-secondary size-12">Top Cloths</small>
+                            </p>
+                            <h5>$ 59.00</h5>
+                        </div>
+                        <div class="col-auto align-self-center ps-0">
+                            <a href="">Aceptar <i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+</header>
