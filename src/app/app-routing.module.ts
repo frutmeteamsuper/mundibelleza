@@ -8,6 +8,9 @@ const routes: Routes = [
 { path: 'notifications', loadChildren: () => import('./components/pages/notifications/notifications.module').then(m => m.NotificationsModule) },
 { path: 'about', loadChildren: () => import('./components/pages/about/about.module').then(m => m.AboutModule) },
 { path: 'contact', loadChildren: () => import('./components/pages/contact/contact.module').then(m => m.ContactModule) },
+{ path: 'product', loadChildren: () => import('./components/pages/product/product.module').then(m => m.ProductModule) },
+{ path: 'cart', loadChildren: () => import('./components/pages/cart/cart.module').then(m => m.CartModule) },
+{ path: 'checkout', loadChildren: () => import('./components/pages/checkout/checkout.module').then(m => m.CheckoutModule) },
  { path:'**',pathMatch:'full',redirectTo:'home'}
 ];
 

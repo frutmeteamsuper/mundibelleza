@@ -1,36 +1,48 @@
     <footer class="footer-area">
         <!--== Start Footer Main ==-->
         <div class="footer-main">
-            <div class="container">
+            <div class="container" style="    max-width: 100%;">
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
                         <div class="widget-item">
                             <div class="widget-about">
-                                <a class="widget-logo" href="index.html">
+                                <a class="widget-logo" [routerLink]="['home']">
                                     <img src="assets/assets/images/logo.jpg" width="95" height="68" alt="Logo">
                                 </a>
-                                <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+                                <p class="desc">Mundibelleza. Todo en productos al mayor y detal para el cuidado personal </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-5 mt-md-0 mt-9">
+                    <div class="col-md-6 col-lg-3 mt-md-0 mt-6">
                         <div class="widget-item">
-                            <h4 class="widget-title">Information</h4>
+                            <h4 class="widget-title">Enlaces</h4>
                             <ul class="widget-nav">
-                                <li><a href="index.html">inicio</a></li>
-                                <li><a href="index.html">tienda</a></li>
-                                <li><a href="index.html">Contacto</a></li>
+                                <li><a [routerLink]="['home']">Inicio</a></li>
+                                <li><a [routerLink]="['']">Tienda</a></li>
+                                <li><a [routerLink]="['about']">Nosotros</a></li>
+                                <li><a [routerLink]="['contact']">Contacto</a></li>
                               
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3 mt-lg-0 mt-6">
+                    <div class="col-md-6 col-lg-5 mt-lg-0 mt-9">
                         <div class="widget-item">
-                            <h4 class="widget-title">Social Info</h4>
+                            <h4 class="widget-title">Contáctanos</h4>
+                            
                             <div class="widget-social">
-                                <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+                                <ul style="    font-size: 20px;">
+                                    <li>
+                                    <i class="fa fa-location-arrow"></i><strong> Transversal 78C bis A #65i -21 sur Bosa amistad</strong>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-whatsapp"></i><strong> +57 310 799 2076</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="widget-social">
+                                <a href="https://instagram.com/" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a>
                                 <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
-                                <a href="https://www.pinterest.com/" target="_blank" rel="noopener"><i class="fa fa-pinterest-p"></i></a>
+                                
                             </div>
                         </div>
                     </div>
