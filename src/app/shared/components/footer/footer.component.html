@@ -1,33 +1,51 @@
-<footer class="footer">
-    <div class="container">
-        <ul class="nav nav-pills nav-justified">
-            <li class="nav-item">
-                <a class="nav-link " (click)="setProfile()"  [ngStyle]="{'color': !_butler.profile ? '#999999' : '#fded09'}" >
-                    <span>
-                        <i class="nav-icon bi bi-person-circle" style="font-size:20px;" ></i>
-                  
-                    </span>
-                </a>
-            </li>
-     
-            <li class="nav-item centerbutton" (click)="statusChange()">
-                <button type="button" class="border-circle" style="margin-top: -190px;border-style: none;border-radius: 20% !important;background-color: white;border-color: white;box-shadow: 0px -12px 10px rgb(0 0 0 / 7%);" 
-                    id="centermenubtn">
-                    <img src="assets/assets/img/pin.png" style="max-width:70px;max-height:90px;" [hidden]="!_butler.bikerStatus"> 
-                    <img src="assets/assets/img/pin2.png" style="max-width:70px;max-height:90px;"[hidden]="_butler.bikerStatus" >
-                      
-                </button>
-            </li>
-      
-            <li class="nav-item">
-                <a class="nav-link " (click)="setRides()">
-                    <span>
-                        <fa-icon [icon]="faMotorcycle"  style="font-size:20px;" [ngStyle]="{'color':   _butler.profile ? '#999999' : '#fded09'}"></fa-icon>
-                        <!-- <i class="nav-icon fas fa-motorcycle" style="font-size:20px;"></i> -->
-                        <!-- <span class="nav-text">Wallet</span> -->
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</footer>
+    <footer class="footer-area">
+        <!--== Start Footer Main ==-->
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="widget-item">
+                            <div class="widget-about">
+                                <a class="widget-logo" href="index.html">
+                                    <img src="assets/assets/images/logo.jpg" width="95" height="68" alt="Logo">
+                                </a>
+                                <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5 mt-md-0 mt-9">
+                        <div class="widget-item">
+                            <h4 class="widget-title">Information</h4>
+                            <ul class="widget-nav">
+                                <li><a href="index.html">inicio</a></li>
+                                <li><a href="index.html">tienda</a></li>
+                                <li><a href="index.html">Contacto</a></li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mt-lg-0 mt-6">
+                        <div class="widget-item">
+                            <h4 class="widget-title">Social Info</h4>
+                            <div class="widget-social">
+                                <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.pinterest.com/" target="_blank" rel="noopener"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--== End Footer Main ==-->
+
+        <!--== Start Footer Bottom ==-->
+        <div class="footer-bottom">
+            <div class="container pt-0 pb-0">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2022 Mundibelleza <i class="fa fa-heart"></i> por <a target="_blank" href="https://www.buckapi.com/">Buckapi</a></p>
+                </div>
+            </div>
+        </div>
+        <!--== End Footer Bottom ==-->
+    </footer>

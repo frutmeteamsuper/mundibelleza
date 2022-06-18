@@ -94,38 +94,38 @@ getDirections(place:Feature){
 }
   ngAfterViewInit(): void {
 
-    console.log(this.bikersService.userLocation);
-     this.script.load(
+    // console.log(this.bikersService.userLocation);
+    //  this.script.load(
+    // // 'jquery',
+    // 'modernizr',
     // 'jquery',
-    'modernizr',
-    'jquery',
-    'jquery-migrate',
-    'bootstrap.bundle',
-    'swiper-bundle',
-    'fancybox',
-    'jquery.nice-select',
-    'main')
-    .then(data => {
-      console.log('script loaded ', data);
-    }).catch(error => console.log(error));
+    // 'jquery-migrate',
+    // 'bootstrap.bundle',
+    // 'swiper-bundle',
+    // 'fancybox',
+    // 'jquery.nice-select',
+    // 'main')
+    // .then(data => {
+    //   console.log('script loaded ', data);
+    // }).catch(error => console.log(error));
    
-    const map = new Map({
-      container: this.mapDivElement.nativeElement, // container ID
-      style: 'mapbox://styles/mapbox/streets-v11', // style URL
-      center:this.bikersService.userLocation,
-      pitch: 60, // pitch in degrees
-      bearing: 40, // bearing in degrees
-      zoom: 15 // starting zoom
-      });
-    const popup = new Popup()
-      .setHTML(`
-      <h6>Aqui estoy</h6>
-      </span>esta es mi ubicación</span>
-        `); 
-    new Marker({color:'red'}).setLngLat(this.bikersService.userLocation!)
-      .setPopup(popup)
-      .addTo(map)
-    this.mapService.setMap(map)
+    // const map = new Map({
+    //   container: this.mapDivElement.nativeElement, // container ID
+    //   style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    //   center:this.bikersService.userLocation,
+    //   pitch: 60, // pitch in degrees
+    //   bearing: 40, // bearing in degrees
+    //   zoom: 15 // starting zoom
+    //   });
+    // const popup = new Popup()
+    //   .setHTML(`
+    //   <h6>Aqui estoy</h6>
+    //   </span>esta es mi ubicación</span>
+    //     `); 
+    // new Marker({color:'red'}).setLngLat(this.bikersService.userLocation!)
+    //   .setPopup(popup)
+    //   .addTo(map)
+    // this.mapService.setMap(map)
 
   }
 }

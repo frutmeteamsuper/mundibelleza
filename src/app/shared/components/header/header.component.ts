@@ -18,21 +18,19 @@ export class HeaderComponent implements AfterViewInit {
     public script:ScriptService,
     public router:Router
   ) {
+    
     console.log('Loading External Scripts');
-    this.script.load(
-      // 'jquery',
-      'popper',
-      'bootstrap-5',
-      'main',
-      'color-scheme',
-      'pwa-services',
-      'chart-js',
-      'progressbar',
-      'swiper',
-      'app')
-      .then(data => {console.log('script loaded ', data);}).catch(error => console.log(error));
+    this.script.load(  
+      // 'modernizr', 
+      // 'jquery', 
+      'jquery-migrate', 
+      'bootstrap.bundle', 
+      'swiper-bundle', 
+      'fancybox', 
+      'jquery.nice-select', 
+      'main'
+    ).then(data => {console.log('script loaded ', data);}).catch(error => console.log(error));
      
-
    }
 
   config: SwiperOptions = {
