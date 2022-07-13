@@ -7,8 +7,23 @@ import { BikersService } from '@app/services/';
 import {Map, Popup,Marker} from 'mapbox-gl';
 import { MapService } from '@app/services/map.service';
 import { Feature } from '@app/interfaces/places';
-
-
+import { Apollo } from "apollo-angular";
+import { DataService } from '@app/services/data.service'; 
+import gql from "graphql-tag";
+const getTravelsQuery = gql`
+query GetTravelsByStatus($status: String!) {
+  getTravelsByStatus(status: $status) {
+    client
+    origin
+    destin
+    distance
+    amount
+    createdAt
+    status
+    rateType
+    currency 
+  }
+}`;
 declare var $: any;
 @Component({
   selector: 'app-home',
@@ -16,7 +31,8 @@ declare var $: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
-
+  travels: any;
+  travels$: any;
   private debounceTimer?:NodeJS.Timeout;
 @ViewChild('mapDiv')mapDivElement!:ElementRef
 @ViewChild('mysearch')myserachElement!:ElementRef
@@ -26,6 +42,8 @@ link:string="";
     private bikersService:BikersService,
     public script:ScriptService,
     private mapService:MapService,
+    private apollo: Apollo,
+    public dataApi: DataService,
     public _butler: Butler
   ) { } 
 
@@ -93,7 +111,7 @@ getDirections(place:Feature){
 
 }
   ngAfterViewInit(): void {
-
+    this.travels$=this.dataApi.travels$;
     // console.log(this.bikersService.userLocation);
     //  this.script.load(
     // // 'jquery',
