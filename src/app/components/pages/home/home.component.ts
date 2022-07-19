@@ -10,17 +10,15 @@ import { Feature } from '@app/interfaces/places';
 import { Apollo } from "apollo-angular";
 import { DataService } from '@app/services/data.service'; 
 import gql from "graphql-tag";
-const getTravelsQuery = gql`
-query GetTravelsByStatus($status: String!) {
-  getTravelsByStatus(status: $status) {
-    client
-    origin
-    destin
-    distance
-    amount
-    createdAt
+const getProductsQuery = gql`
+query GetProductsByStatus($status: String!) {
+  getProductsByStatus(status: $status) {
+    name
+    description
+    presentation
+    ref
+    price
     status
-    rateType
     currency 
   }
 }`;
@@ -31,8 +29,8 @@ declare var $: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
-  travels: any;
-  travels$: any;
+  products: any;
+  products$: any;
   private debounceTimer?:NodeJS.Timeout;
 @ViewChild('mapDiv')mapDivElement!:ElementRef
 @ViewChild('mysearch')myserachElement!:ElementRef
@@ -111,7 +109,7 @@ getDirections(place:Feature){
 
 }
   ngAfterViewInit(): void {
-    this.travels$=this.dataApi.travels$;
+    this.products$=this.dataApi.products$;
     // console.log(this.bikersService.userLocation);
     //  this.script.load(
     // // 'jquery',

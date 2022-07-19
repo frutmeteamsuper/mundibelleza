@@ -17,6 +17,19 @@ query GetTravelsByStatus($status: String!) {
     currency 
   }
 }`;
+const GETPRODUCTS =  gql`
+query GetProductsByStatus($status: String!) {
+  getProductsByStatus(status: $status) {
+    name
+    description
+    presentation
+    category
+    price
+    ref
+    status    
+    currency 
+  }
+}`;
 const REGISTER =  gql`
     mutation register($input: UserInput){
         register(input:$input){
@@ -43,8 +56,8 @@ const LOGIN =  gql`
   })
 
   export class DataService {
-    private travelsSubject= new BehaviorSubject<any[any]>(null);
-    travels$ = this.travelsSubject.asObservable();
+    private productsSubject= new BehaviorSubject<any[any]>(null);
+    products$ = this.productsSubject.asObservable();
 
     constructor(
         private apollo:Apollo
@@ -53,16 +66,16 @@ const LOGIN =  gql`
     }
      getDataAPI():void{
         this.apollo.watchQuery<any>({
-            query: GETNEWTRAVELS,
+            query: GETPRODUCTS,
             variables:{
-                status:"new"
+                status:"activated"
             }
         }).valueChanges.pipe(
             take(1),
             tap(({data})=>{
-                const {getTravelsByStatus} =data;
-                this.travelsSubject.next(getTravelsByStatus);
-                console.log(getTravelsByStatus);
+                const {getProductsByStatus} =data;
+                this.productsSubject.next(getProductsByStatus);
+                console.log(getProductsByStatus);
             })
             
         ).subscribe();
