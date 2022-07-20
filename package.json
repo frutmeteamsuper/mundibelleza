@@ -19,19 +19,20 @@
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
     "@angular/service-worker": "~13.1.0",
+    "@apollo/client": "^3.0.0",
     "@fortawesome/angular-fontawesome": "^0.10.1",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "apollo-angular": "^3.0.1",
+    "graphql": "^16",
     "mapbox-gl": "^1.13.2",
+    "ngx-infinite-scroll": "^13.1.0",
     "ngx-useful-swiper": "^10.0.1",
     "rxjs": "~7.4.0",
     "swiper": "^6.8.4",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4",
-    "@apollo/client": "^3.0.0",
-    "graphql": "^16"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.1.2",

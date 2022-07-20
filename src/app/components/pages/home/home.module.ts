@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
+
 
 @NgModule({
   declarations: [
@@ -11,7 +13,8 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    NgxUsefulSwiperModule
+    NgxUsefulSwiperModule,
+    InfiniteScrollModule
   ]
 })
 export class HomeModule { }

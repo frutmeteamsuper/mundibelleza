@@ -1,5 +1,11 @@
     <main class="main-content">
-
+   <!--   <div
+      class="search-results"
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()"
+    ></div> -->
         <section class="hero-slider-area position-relative">
             <div class="swiper hero-slider-container">
                 <div class="swiper-wrapper">
@@ -228,7 +234,12 @@
             </div>
         </section>
 
-        <section class="section-space">
+        <section class="section-space" 
+    infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()"
+        >
             <div class="container">
                 <div class="row">
                     <div class="col-12">

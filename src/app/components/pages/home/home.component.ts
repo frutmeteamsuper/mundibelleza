@@ -29,6 +29,7 @@ declare var $: any;
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
+   // selector: string = ".main-content";
   products: any;
   products$: any;
   private debounceTimer?:NodeJS.Timeout;
@@ -108,6 +109,10 @@ getDirections(place:Feature){
   this.mapService.getRouteBetweenPoints(start,end);
 
 }
+
+  onScroll() {
+    console.log("scrolled!!");
+  }
   ngAfterViewInit(): void {
     this.products$=this.dataApi.products$;
     // console.log(this.bikersService.userLocation);
