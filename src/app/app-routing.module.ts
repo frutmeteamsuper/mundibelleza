@@ -11,6 +11,7 @@ const routes: Routes = [
 { path: 'product', loadChildren: () => import('./components/pages/product/product.module').then(m => m.ProductModule) },
 { path: 'cart', loadChildren: () => import('./components/pages/cart/cart.module').then(m => m.CartModule) },
 { path: 'checkout', loadChildren: () => import('./components/pages/checkout/checkout.module').then(m => m.CheckoutModule) },
+{ path: 'shop', loadChildren: () => import('./components/pages/shop/shop.module').then(m => m.ShopModule) },
  { path:'**',pathMatch:'full',redirectTo:'home'}
 ];
 
