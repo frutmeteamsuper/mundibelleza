@@ -12,7 +12,9 @@ import gql from "graphql-tag";
 })
 export class ShopComponent implements OnInit {
   products: any;
-  products$: any;
+  products$: any;  
+  categories: any;
+  categories$: any;
   constructor(
    private apollo: Apollo,
     public dataApi: DataService,
@@ -27,6 +29,7 @@ export class ShopComponent implements OnInit {
 
   ngOnInit(): void {
      this.products$=this.dataApi.products$;   
+     this.categories$=this.dataApi.categories$;   
    // this.loadProducts();
 
   }
