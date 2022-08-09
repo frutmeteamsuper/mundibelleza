@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Apollo, gql } from 'apollo-angular';
 import { BehaviorSubject } from 'rxjs';
 import { take,tap } from 'rxjs/operators';
+import {Butler} from '@app/services/butler.service';
 
 const GETNEWTRAVELS =  gql`
 query GetTravelsByStatus($status: String!) {
@@ -18,8 +19,8 @@ query GetTravelsByStatus($status: String!) {
   }
 }`;
 const GETPRODUCTS =  gql`
-query GetProductsByStatus($status: String!) {
-  getProductsByStatus(status: $status) {
+query GetProductsByStatus($status: String!,$skip:Int,$limit:Int) {
+  getProductsByStatus(status: $status,skip:$skip,limit:$limit) {
     name
     description
     presentation
@@ -27,7 +28,8 @@ query GetProductsByStatus($status: String!) {
     price
     ref
     status    
-    currency 
+    currency
+    images 
   }
 }`;
 const REGISTER =  gql`
@@ -60,15 +62,19 @@ const LOGIN =  gql`
     products$ = this.productsSubject.asObservable();
 
     constructor(
-        private apollo:Apollo
+        private apollo:Apollo,
+        public _butler:Butler
+
     ) {
-        this.getDataAPI();
+       this.getDataAPI(this._butler.skip,this._butler.limit);
     }
-     getDataAPI():void{
+     getDataAPI(vskip:any,vlimit:any):void{
         this.apollo.watchQuery<any>({
             query: GETPRODUCTS,
             variables:{
-                status:"activated"
+                status:"activated",
+                skip:vskip,
+                limit:vlimit,
             }
         }).valueChanges.pipe(
             take(1),

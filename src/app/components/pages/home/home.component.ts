@@ -114,7 +114,7 @@ getDirections(place:Feature){
     console.log("scrolled!!");
   }
   ngAfterViewInit(): void {
-    this.products$=this.dataApi.products$;
+    // this.products$=this.dataApi.products$;
     // console.log(this.bikersService.userLocation);
     //  this.script.load(
     // // 'jquery',
