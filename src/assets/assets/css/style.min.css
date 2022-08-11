@@ -911,7 +911,7 @@ hr {
 }
 
 .section-title p {
-    max-width: 430px;
+    /*max-width: 430px;*/
     margin: 0 auto
 }
 
@@ -7981,8 +7981,8 @@ hr {
 }
 
 .accordion-button:not(.collapsed) {
-    color: #e65b5b;
-    border-color: #fff1f1;
+    color: #d725d1;
+    border-color: #fe76fe;
     background-color: #fff1f1;
     box-shadow: none;
     font-size: 15px
@@ -8004,7 +8004,24 @@ hr {
   height:40px;
   bottom:75px;
   right:30px;
-  background-color:#25d366;
+  background-color:#fe7afe;
+  color:#fff;
+  border-radius:50%;
+  text-align:center;
+  font-size:25px;
+  z-index:100;
+}
+
+.whatsapp-icon {
+  margin-top:15px;
+}
+.whatsapp1 {
+  position:fixed;
+  width:40px;
+  height:40px;
+  bottom:120px;
+  right:30px;
+  background-color:#79dfc9;
   color:#fff;
   border-radius:50%;
   text-align:center;
