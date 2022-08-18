@@ -44,6 +44,20 @@ query GetProductsByStatus($status: String!,$skip:Int,$limit:Int) {
     images 
   }
 }`;
+const GETBESTSELLER =  gql`
+query GetBestseller($status: String!,$skip:Int,$limit:Int) {
+  getBestseller(status: $status,skip:$skip,limit:$limit) {
+    name
+    description
+    presentation
+    category
+    price
+    ref
+    status    
+    currency
+    images 
+  }
+}`;
 const REGISTER =  gql`
     mutation register($input: UserInput){
         register(input:$input){
@@ -70,6 +84,8 @@ const LOGIN =  gql`
   })
 
   export class DataService {
+    private bestsellerSubject= new BehaviorSubject<any[any]>(null);
+    bestseller$ = this.bestsellerSubject.asObservable();
     private productsSubject= new BehaviorSubject<any[any]>(null);
     products$ = this.productsSubject.asObservable();
      private categoriesSubject= new BehaviorSubject<any[any]>(null);
@@ -82,6 +98,7 @@ const LOGIN =  gql`
     ) {
        this.getDataAPI(this._butler.skip,this._butler.limit);
        this.getDataAPIcategories(0,0);
+       this.getBestseller(0,0);
     }
      getDataAPI(vskip:any,vlimit:any):void{
         this.apollo.watchQuery<any>({
@@ -97,6 +114,24 @@ const LOGIN =  gql`
                 const {getProductsByStatus} =data;
                 this.productsSubject.next(getProductsByStatus);
                 console.log(getProductsByStatus);
+            })
+            
+        ).subscribe();
+    }
+     getBestseller(vskip:any,vlimit:any):void{
+        this.apollo.watchQuery<any>({
+            query: GETBESTSELLER,
+            variables:{
+                status:"bestseller",
+                skip:vskip,
+                limit:vlimit,
+            }
+        }).valueChanges.pipe(
+            take(1),
+            tap(({data})=>{
+                const {getBestseller} =data;
+                this.bestsellerSubject.next(getBestseller);
+                console.log(getBestseller);
             })
             
         ).subscribe();

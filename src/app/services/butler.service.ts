@@ -4,6 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class Butler {
+    car:any[]=[];
+    currency:number=1;
+    numProd:number=0;
+    preview:any={};
+    totalProducts:number=0;
+    imagePreviewProduct:string="";
+
     vector:any={};       
     string:string=""; 
     distance:string="";

@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { ScriptService } from '@app/services/script.service';
 import { ScriptStore } from '@app/services/script.store';
 import { SwiperOptions } from 'swiper';
@@ -30,7 +31,9 @@ declare var $: any;
 })
 export class HomeComponent implements AfterViewInit {
    // selector: string = ".main-content";
-  products: any;
+  bestseller: any;
+  bestseller$: any;
+   products: any;
   products$: any;
   private debounceTimer?:NodeJS.Timeout;
 @ViewChild('mapDiv')mapDivElement!:ElementRef
@@ -41,6 +44,7 @@ link:string="";
     private bikersService:BikersService,
     public script:ScriptService,
     private mapService:MapService,
+    public router:Router,
     private apollo: Apollo,
     public dataApi: DataService,
     public _butler: Butler
@@ -60,6 +64,13 @@ link:string="";
   };  
   
 
+ public viewProduct(tix:any){
+    let tixToView = tix;
+    this._butler.preview=tixToView;
+    this._butler.preview.quantity=1; 
+    this._butler.imagePreviewProduct=this._butler.preview.images[0];
+      this.router.navigate(['/product']);
+  } 
 
 public details(b:any){
   let a =b;
@@ -114,7 +125,7 @@ getDirections(place:Feature){
     console.log("scrolled!!");
   }
   ngAfterViewInit(): void {
-    // this.products$=this.dataApi.products$;
+    this.bestseller$=this.dataApi.bestseller$;
     // console.log(this.bikersService.userLocation);
     //  this.script.load(
     // // 'jquery',
