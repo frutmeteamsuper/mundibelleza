@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Butler} from '@app/services/butler.service';
+import { Router } from '@angular/router';
 
 import { Apollo } from "apollo-angular";
 import { DataService } from '@app/services/data.service'; 
@@ -18,7 +19,8 @@ export class ShopComponent implements OnInit {
   constructor(
    private apollo: Apollo,
     public dataApi: DataService,
-    public _butler: Butler
+    public _butler: Butler,
+    public router:Router
     ) { }
 
   loadProducts(){
@@ -33,7 +35,25 @@ export class ShopComponent implements OnInit {
    // this.loadProducts();
 
   }
-  loadmore(indice:any){
+
+
+public quick(tix:any){
+    let tixToView = tix;
+    this._butler.preview=tixToView;
+    // this._butler.preview.quantity=1; 
+    this._butler.imagePreviewProduct=this._butler.preview.images[0];
+      // this.router.navigate(['/product']);
+  } 
+ public viewProduct(tix:any){
+    let tixToView = tix;
+    this._butler.preview=tixToView;
+    // this._butler.preview.quantity=1; 
+    this._butler.imagePreviewProduct=this._butler.preview.images[0];
+      this.router.navigate(['/product']);
+  } 
+
+  loadmore(indice:any
+    ){
     // this.products$=[];
     console.log(indice);
      this._butler.skip=this._butler.skip+9; 

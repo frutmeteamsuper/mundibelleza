@@ -7,7 +7,7 @@
                         <div class="col-md-5">
                             <div class="page-header-st3-content text-center text-md-start">
                                 <ol class="breadcrumb justify-content-center justify-content-md-start">
-                                    <li class="breadcrumb-item"><a class="text-dark" href="index.html">Incio</a></li>
+                                    <li class="breadcrumb-item"><a class="text-dark" [routerLink]="['/home']">Incio</a></li>
                                     <li class="breadcrumb-item active text-dark" aria-current="page">Detalle del producto</li>
                                 </ol>
                                 <h2 class="page-header-title">Producto</h2>
@@ -25,7 +25,7 @@
                     <div class="row product-details">
                         <div class="col-lg-6">
                             <div class="product-details-thumb">
-                                <img src="{{this._butler.imagePreviewProduct}}" width="570" height="693" alt="Image">
+                                <img src="{{_butler.imagePreviewProduct}}" width="570" height="693" alt="Image">
                                 <span class="flag-new">new</span>
                             </div>
                         </div>

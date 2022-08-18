@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import {Butler} from '@app/services/butler.service';
 @Component({
@@ -9,10 +10,11 @@ import {Butler} from '@app/services/butler.service';
 export class ProductComponent implements OnInit {
 
   constructor(
-public _butler:Butler
+public _butler:Butler,
+   public router:Router
     ) { }
 public addToCar(){
-  
+
 }
   ngOnInit(): void {
   }

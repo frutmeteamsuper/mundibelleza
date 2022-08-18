@@ -117,7 +117,7 @@
                                 <div class="col-lg-6">
                                     <!--== Start Product Thumbnail Area ==-->
                                     <div class="product-single-thumb">
-                                        <img src="assets/assets/images/shop/quick-view1.jpg" width="544" height="560" alt="Image-HasTech">
+                                        <img src="{{_butler.imagePreviewProduct}}" width="544" height="560" alt="Image-HasTech">
                                     </div>
                                     <!--== End Product Thumbnail Area ==-->
                                 </div>
@@ -125,18 +125,18 @@
                                     <!--== Start Product Info Area ==-->
                                     <div class="product-details-content">
                                         <h5 class="product-details-collection">Premioum collection</h5>
-                                        <h3 class="product-details-title">Offbline Instant Age Rewind Eraser.</h3>
+                                        <h3 class="product-details-title">{{_butler.preview.name}}</h3>
                                        
-                                        <p class="mb-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, repellendus. Nam voluptate illo ut quia non sapiente provident alias quos laborum incidunt, earum accusamus, natus. Vero pariatur ut veniam sequi amet consectetur.</p>
+                                        <p class="mb-6">{{_butler.preview.description}}</p>
                                         <div class="product-details-pro-qty">
                                             <div class="pro-qty">
                                                 <input type="text" title="Quantity" value="01">
                                             </div>
                                         </div>
                                         <div class="product-details-action">
-                                            <h4 class="price">$254.22</h4>
+                                            <h4 class="price">COLP {{_butler.preview.price}}</h4>
                                             <div class="product-details-cart-wishlist">
-                                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">Add to cart</button>
+                                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#action-CartAddModal">Agregar al carro</button>
                                             </div>
                                         </div>
                                     </div>

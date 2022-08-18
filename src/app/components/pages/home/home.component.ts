@@ -64,6 +64,13 @@ link:string="";
   };  
   
 
+ public quick(tix:any){
+    let tixToView = tix;
+    this._butler.preview=tixToView;
+    // this._butler.preview.quantity=1; 
+    this._butler.imagePreviewProduct=this._butler.preview.images[0];
+      // this.router.navigate(['/product']);
+  } 
  public viewProduct(tix:any){
     let tixToView = tix;
     this._butler.preview=tixToView;
