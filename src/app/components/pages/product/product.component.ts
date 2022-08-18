@@ -11,7 +11,9 @@ export class ProductComponent implements OnInit {
   constructor(
 public _butler:Butler
     ) { }
-
+public addToCar(){
+  
+}
   ngOnInit(): void {
   }
 

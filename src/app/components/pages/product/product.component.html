@@ -31,10 +31,10 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="product-details-content">
-                                <h5 class="product-details-collection">Cuidado de la piel</h5>
+                                <h5 class="product-details-collection">{{_butler.preview.name}}</h5>
                                 <h3 class="product-details-title">{{_butler.preview.name}}</h3>
                                 
-                                <p class="mb-7">Desripcion</p>
+                                <p class="mb-7">{{_butler.preview.description}}</p>
                                 <div class="product-details-pro-qty">
                                     <div class="pro-qty">
                                         <input type="text" title="Quantity" value="01">
@@ -45,10 +45,10 @@
                                     <label class="form-check-label" for="ShippingCost">Shipping </label>
                                 </div>
                                 <div class="product-details-action">
-                                    <h4 class="price">$254.22</h4>
+                                    <h4 class="price">COLP {{_butler.preview.price}}</h4>
                                     <div class="product-details-cart-wishlist">
                                         
-                                        <button type="button" class="btn" data-bs-toggle="modal" [routerLink]="['../cart']" >Agregar al carro</button>
+                                        <button type="button" class="btn" data-bs-toggle="modal" (click)="addToCar()" >Agregar al carro</button>
                                        <!--  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#action-CartAddModal" [routerLink]="['../cart']" >Agregar al carro</button> -->
                                     </div>
                                 </div>
