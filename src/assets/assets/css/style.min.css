@@ -1755,7 +1755,7 @@ hr {
 }
 
 .fancybox__carousel.is-draggable .fancybox__slide,.fancybox__carousel.is-draggable .fancybox__slide .fancybox__content,.modal-backdrop,.offcanvas-backdrop {
-    cursor: url(../images/icons/cancel-white.webp),auto
+    cursor: url(../images/icons/cancel-white.jpg),auto
 }
 
 .modal-backdrop,.offcanvas-backdrop {
@@ -3901,7 +3901,8 @@ hr {
 
 .pro-qty {
     display: inline-block;
-    position: relative
+    position: relative;
+    color: #231942;
 }
 
 .pro-qty input {
@@ -3910,7 +3911,7 @@ hr {
     font-size: 13px;
     border: 2px solid #e63946;
     border-radius: 50px;
-    color: #231942;
+ c
     font-weight: 700;
     padding: 0 55px;
     text-align: center

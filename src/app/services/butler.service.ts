@@ -10,6 +10,7 @@ export class Butler {
     preview:any={};
     totalProducts:number=0;
     imagePreviewProduct:string="";
+      subTotal:number=0;
 
     vector:any={};       
     string:string=""; 
