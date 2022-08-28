@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class Butler {
+<<<<<<< HEAD
     car:any[]=[];
     currency:number=1;
     numProd:number=0;
@@ -12,6 +13,8 @@ export class Butler {
     imagePreviewProduct:string="";
       subTotal:number=0;
 
+=======
+>>>>>>> parent of e1d01c6... bestseller
     vector:any={};       
     string:string=""; 
     distance:string="";

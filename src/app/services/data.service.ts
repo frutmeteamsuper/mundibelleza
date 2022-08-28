@@ -44,6 +44,7 @@ query GetProductsByStatus($status: String!,$skip:Int,$limit:Int) {
     images 
   }
 }`;
+<<<<<<< HEAD
 const GETBESTSELLER =  gql`
 query GetBestseller($status: String!,$skip:Int,$limit:Int) {
   getBestseller(status: $status,skip:$skip,limit:$limit) {
@@ -72,6 +73,8 @@ query GetDiscount($status: String!,$skip:Int,$limit:Int) {
     images 
   }
 }`;
+=======
+>>>>>>> parent of e1d01c6... bestseller
 const REGISTER =  gql`
     mutation register($input: UserInput){
         register(input:$input){
@@ -98,10 +101,13 @@ const LOGIN =  gql`
   })
 
   export class DataService {
+<<<<<<< HEAD
     private discountSubject= new BehaviorSubject<any[any]>(null);
     discount$ = this.discountSubject.asObservable();
     private bestsellerSubject= new BehaviorSubject<any[any]>(null);
     bestseller$ = this.bestsellerSubject.asObservable();
+=======
+>>>>>>> parent of e1d01c6... bestseller
     private productsSubject= new BehaviorSubject<any[any]>(null);
     products$ = this.productsSubject.asObservable();
      private categoriesSubject= new BehaviorSubject<any[any]>(null);
@@ -114,8 +120,11 @@ const LOGIN =  gql`
     ) {
        this.getDataAPI(this._butler.skip,this._butler.limit);
        this.getDataAPIcategories(0,0);
+<<<<<<< HEAD
        this.getBestseller(0,0);
        this.getDiscount(0,0);
+=======
+>>>>>>> parent of e1d01c6... bestseller
     }
      getDataAPI(vskip:any,vlimit:any):void{
         this.apollo.watchQuery<any>({
@@ -135,6 +144,7 @@ const LOGIN =  gql`
             
         ).subscribe();
     }
+<<<<<<< HEAD
      getBestseller(vskip:any,vlimit:any):void{
         this.apollo.watchQuery<any>({
             query: GETBESTSELLER,
@@ -171,6 +181,8 @@ const LOGIN =  gql`
             
         ).subscribe();
     }
+=======
+>>>>>>> parent of e1d01c6... bestseller
      getDataAPIcategories(vskip:any,vlimit:any):void{
         this.apollo.watchQuery<any>({
             query: GETCATEGORIES,

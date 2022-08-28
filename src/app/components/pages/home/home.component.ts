@@ -1,5 +1,4 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { Router } from '@angular/router';
 import { ScriptService } from '@app/services/script.service';
 import { ScriptStore } from '@app/services/script.store';
 import { SwiperOptions } from 'swiper';
@@ -31,9 +30,7 @@ declare var $: any;
 })
 export class HomeComponent implements AfterViewInit {
    // selector: string = ".main-content";
-  bestseller: any;
-  bestseller$: any;
-   products: any;
+  products: any;
   products$: any;
   private debounceTimer?:NodeJS.Timeout;
 @ViewChild('mapDiv')mapDivElement!:ElementRef
@@ -44,7 +41,6 @@ link:string="";
     private bikersService:BikersService,
     public script:ScriptService,
     private mapService:MapService,
-    public router:Router,
     private apollo: Apollo,
     public dataApi: DataService,
     public _butler: Butler
@@ -64,6 +60,7 @@ link:string="";
   };  
   
 
+<<<<<<< HEAD
  public quick(tix:any){
     let tixToView = tix;
     this._butler.preview=tixToView;
@@ -78,6 +75,8 @@ link:string="";
     this._butler.imagePreviewProduct=this._butler.preview.images[0];
       this.router.navigate(['/product']);
   } 
+=======
+>>>>>>> parent of e1d01c6... bestseller
 
 public details(b:any){
   let a =b;
@@ -132,7 +131,7 @@ getDirections(place:Feature){
     console.log("scrolled!!");
   }
   ngAfterViewInit(): void {
-    this.bestseller$=this.dataApi.bestseller$;
+    // this.products$=this.dataApi.products$;
     // console.log(this.bikersService.userLocation);
     //  this.script.load(
     // // 'jquery',
